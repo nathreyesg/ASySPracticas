@@ -1,0 +1,220 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Ejercicio 3</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2024-03-25"><meta name="DC.source" content="parte2.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Ejercicio 3</h1><!--introduction--><p>Para las se&ntilde;ales mostradas en la figura P3.1-1b,bosqueje las siguientes se&ntilde;ales: Generando la funci&oacute;n original Iniciamos recreando la se&ntilde;al, mostrada en la grafica que muestra "Lathi" Hacemos anonima la funcion y la guardamos en la varibale "y". Continuamente proponemos un intervalo adecuado y se pueda representar en la grafica correctamente. Definir los puntos de la se&ntilde;al discreta</p><!--/introduction--><pre class="codeinput">x = [0 1 2 3 4 5 6];
+y = [0 1 2 3 2 1 0];
+</pre><pre class="codeinput">stem(x, y, <span class="string">'filled'</span>, <span class="string">'MarkerFaceColor'</span>, <span class="string">'b'</span>, <span class="string">'MarkerEdgeColor'</span>, <span class="string">'b'</span>);
+</pre><img vspace="5" hspace="5" src="parte2_01.png" alt=""> <p>Establecer el rango de los ejes</p><pre class="codeinput">xlim([-1 7]);
+ylim([-1 4]);
+
+grid <span class="string">on</span>;
+
+title(<span class="string">'x[n]'</span>);
+xlabel(<span class="string">'n'</span>);
+ylabel(<span class="string">'x[n]'</span>);
+</pre><img vspace="5" hspace="5" src="parte2_02.png" alt=""> <p>Aplicar transformaciones (a) x[-n]: La se&ntilde;al se refleja en el eje horizontal</p><pre class="codeinput">figure;
+x_b = x - 6;
+y_b = y;
+stem(x_b, y_b, <span class="string">'filled'</span>, <span class="string">'MarkerFaceColor'</span>, <span class="string">'bl'</span>, <span class="string">'MarkerEdgeColor'</span>, <span class="string">'b'</span>);
+grid <span class="string">on</span>;
+title(<span class="string">'x[-n]'</span>);
+xlabel(<span class="string">'n'</span>);
+ylabel(<span class="string">'x[-n]'</span>);
+</pre><img vspace="5" hspace="5" src="parte2_03.png" alt=""> <p>(b) x[n+6]: Se adelanta 6 unidades</p><pre class="codeinput">figure;
+x_b = x - 6;
+y_b = y;
+stem(x_b, y_b, <span class="string">'filled'</span>, <span class="string">'MarkerFaceColor'</span>, <span class="string">'b'</span>, <span class="string">'MarkerEdgeColor'</span>, <span class="string">'b'</span>);
+grid <span class="string">on</span>;
+title(<span class="string">'x[n+6]'</span>);
+xlabel(<span class="string">'n'</span>);
+ylabel(<span class="string">'x[n+6]'</span>);
+</pre><img vspace="5" hspace="5" src="parte2_04.png" alt=""> <p>(c) x[n-6]: La se&ntilde;al se atraza 6 unidades</p><pre class="codeinput">figure;
+x_c = x + 6;
+y_c = y;
+stem(x_c, y_c, <span class="string">'filled'</span>, <span class="string">'MarkerFaceColor'</span>, <span class="string">'b'</span>, <span class="string">'MarkerEdgeColor'</span>, <span class="string">'b'</span>);
+grid <span class="string">on</span>;
+title(<span class="string">'x[n-6]'</span>);
+xlabel(<span class="string">'n'</span>);
+ylabel(<span class="string">'x[n-6]'</span>);
+</pre><img vspace="5" hspace="5" src="parte2_05.png" alt=""> <p>(d) x[3n]: Compresi&oacute;n en el eje n por un factor de 3</p><pre class="codeinput">figure;
+x_d = -1:6;
+y_d = [0 0 3 0 0 0 0 0];
+stem(x_d, y_d, <span class="string">'filled'</span>, <span class="string">'MarkerFaceColor'</span>, <span class="string">'b'</span>, <span class="string">'MarkerEdgeColor'</span>, <span class="string">'b'</span>);
+grid <span class="string">on</span>;
+title(<span class="string">'x[3n]'</span>);
+xlabel(<span class="string">'n'</span>);
+ylabel(<span class="string">'x[3n]'</span>);
+</pre><img vspace="5" hspace="5" src="parte2_06.png" alt=""> <p>(e) x[n/3]: Expansi&oacute;n en el eje n por un factor de 3</p><pre class="codeinput">figure;
+x_e = x * 3;
+y_e = y;
+stem(x_e, y_e, <span class="string">'filled'</span>, <span class="string">'MarkerFaceColor'</span>, <span class="string">'bl'</span>, <span class="string">'MarkerEdgeColor'</span>, <span class="string">'bl'</span>);
+grid <span class="string">on</span>;
+title(<span class="string">'x[n/3]'</span>);
+xlabel(<span class="string">'n'</span>);
+ylabel(<span class="string">'x[n/3]'</span>);
+</pre><img vspace="5" hspace="5" src="parte2_07.png" alt=""> <p>(f) x[3-n]: Reflejo respecto al eje horizontal y desplazamiento hacia la derecha en 3 unidades</p><pre class="codeinput">figure;
+x_f = 3 - x;
+y_f = y;
+stem(x_f, y_f, <span class="string">'filled'</span>, <span class="string">'MarkerFaceColor'</span>, <span class="string">'b'</span>, <span class="string">'MarkerEdgeColor'</span>, <span class="string">'b'</span>);
+grid <span class="string">on</span>;
+title(<span class="string">'x[3-n]'</span>);
+xlabel(<span class="string">'n'</span>);
+ylabel(<span class="string">'x[3-n]'</span>);
+</pre><img vspace="5" hspace="5" src="parte2_08.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Ejercicio 3 
+% Para las señales mostradas en la figura P3.1-1b,bosqueje las siguientes señales:
+% Generando la función original
+% Iniciamos recreando la señal, mostrada en la grafica que muestra "Lathi" Hacemos anonima la funcion y la guardamos en la varibale "y". Continuamente proponemos un intervalo adecuado y se pueda representar en la grafica correctamente.
+% Definir los puntos de la señal discreta
+%%
+x = [0 1 2 3 4 5 6];
+y = [0 1 2 3 2 1 0];
+%%
+stem(x, y, 'filled', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'b');
+%%
+% Establecer el rango de los ejes
+%%
+xlim([-1 7]);
+ylim([-1 4]);
+
+grid on;
+
+title('x[n]');
+xlabel('n');
+ylabel('x[n]');
+%%
+% Aplicar transformaciones
+% (a) x[-n]: La señal se refleja en el eje horizontal
+%%
+figure;
+x_b = x - 6;
+y_b = y;
+stem(x_b, y_b, 'filled', 'MarkerFaceColor', 'bl', 'MarkerEdgeColor', 'b');
+grid on;
+title('x[-n]');
+xlabel('n');
+ylabel('x[-n]');
+%%
+% (b) x[n+6]: Se adelanta 6 unidades
+%%
+figure;
+x_b = x - 6;
+y_b = y;
+stem(x_b, y_b, 'filled', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'b');
+grid on;
+title('x[n+6]');
+xlabel('n');
+ylabel('x[n+6]');
+%%
+% (c) x[n-6]: La señal se atraza 6 unidades
+%%
+figure;
+x_c = x + 6;
+y_c = y;
+stem(x_c, y_c, 'filled', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'b');
+grid on;
+title('x[n-6]');
+xlabel('n');
+ylabel('x[n-6]');
+%%
+% (d) x[3n]: Compresión en el eje n por un factor de 3
+%%
+figure;
+x_d = -1:6;
+y_d = [0 0 3 0 0 0 0 0]; 
+stem(x_d, y_d, 'filled', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'b');
+grid on;
+title('x[3n]');
+xlabel('n');
+ylabel('x[3n]');
+%%
+% (e) x[n/3]: Expansión en el eje n por un factor de 3
+%%
+figure;
+x_e = x * 3;
+y_e = y;
+stem(x_e, y_e, 'filled', 'MarkerFaceColor', 'bl', 'MarkerEdgeColor', 'bl');
+grid on;
+title('x[n/3]');
+xlabel('n');
+ylabel('x[n/3]');
+%%
+% (f) x[3-n]: Reflejo respecto al eje horizontal y desplazamiento hacia la derecha en 3 unidades
+%%
+figure;
+x_f = 3 - x;
+y_f = y;
+stem(x_f, y_f, 'filled', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'b');
+grid on;
+title('x[3-n]');
+xlabel('n');
+ylabel('x[3-n]');
+##### SOURCE END #####
+--></body></html>
